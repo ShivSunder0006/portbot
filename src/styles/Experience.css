@@ -1,0 +1,90 @@
+.experience {
+  background: #e6f7ff;
+  padding: 80px 20px;
+  color: #333;
+  width: 100%;
+}
+
+.experience h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.4rem;
+  color: #009688;
+}
+
+/* 👇 Cards are stacked vertically and centered */
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;     /* ✅ center all cards horizontally */
+  width: 100%;
+}
+
+/* 👇 Each card centered with a max width */
+.experience-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-left: 6px solid #00bcd4;
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;       /* ✅ keep content readable */
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* 👇 Bigger logos */
+.company-logo {
+  width: 140px;   /* increased size */
+  height: 140px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.experience-info {
+  text-align: left;
+  flex: 1;
+}
+
+.experience-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+.experience-info h4 {
+  margin: 4px 0;
+  font-size: 1.2rem;
+  color: #00bcd4;
+}
+.experience-info .period {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+.experience-info ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive: stack logo above text */
+@media (max-width: 768px) {
+  .experience-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .experience-info {
+    text-align: center;
+  }
+}

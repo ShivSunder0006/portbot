@@ -1,0 +1,126 @@
+.projects {
+  background: #e6f7ff;
+  padding: 80px 20px;
+  color: #333;
+  width: 100%;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.4rem;
+  color: #009688;
+}
+
+/* Stack projects vertically, centered like Experience */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;   /* ✅ center all project cards */
+  width: 100%;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-left: 6px solid #00bcd4;
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;  /* ✅ keeps centered */
+  margin: 0 auto;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.project-logo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.project-info {
+  text-align: left;
+  flex: 1;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.project-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.tags span {
+  display: inline-block;
+  background: #f0faff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-right: 6px;
+  color: #009688;
+}
+
+/* 🔹 Links Section */
+.project-links {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Styled buttons */
+.btn-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-link.live {
+  background: #00bcd4;
+  color: #fff;
+}
+.btn-link.live:hover {
+  background: #0097a7;
+}
+
+.btn-link.github {
+  background: #f0faff;
+  color: #009688;
+  border: 1px solid #00bcd4;
+}
+.btn-link.github:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* Responsive: stack image above text */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-info {
+    text-align: center;
+  }
+}

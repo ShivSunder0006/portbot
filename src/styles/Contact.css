@@ -1,0 +1,55 @@
+.contact {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  color: #333;
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  color: #009688;
+}
+
+.contact p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.contact-btn .icon {
+  font-size: 1.2rem;
+}
+
+.contact-btn.email {
+  background: #00bcd4;
+}
+.contact-btn.linkedin {
+  background: #26c6da;
+}
+.contact-btn.instagram {
+  background: #009688;
+}
+
+.contact-btn:hover {
+  filter: brightness(0.9);
+}
