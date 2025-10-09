@@ -3,21 +3,21 @@ FROM python:3.10-slim AS backend
 
 WORKDIR /app
 
-# Install backend dependencies
+# Install backend deps
 COPY server/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend code
 COPY server ./server
 
 # ================= Frontend =================
 FROM node:18 AS frontend
 
 WORKDIR /frontend
-COPY portfolio ./portfolio
-WORKDIR /frontend/portfolio
+# Copy root-level React app (src, public, package.json)
+COPY package.json package-lock.json* ./
+COPY src ./src
+COPY public ./public
 
-# Install and build React app
 RUN npm install && npm run build
 
 # ================= Final App =================
@@ -25,16 +25,15 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Copy backend from stage1
+# Copy backend with deps from backend stage
 COPY --from=backend /app /app
 
-# Install FastAPI + Uvicorn runtime
+# Install FastAPI runtime
 RUN pip install fastapi uvicorn python-multipart
 
-# Copy built frontend into backend static folder
-COPY --from=frontend /frontend/portfolio/build ./server/frontend
+# Copy built React app into backend static folder
+COPY --from=frontend /frontend/build ./server/frontend
 
-EXPOSE 7860
+EXPOSE 8000
 
-# Start FastAPI (serves frontend + API)
-CMD ["uvicorn", "server.app:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["uvicorn", "server.app:app", "--host", "0.0.0.0", "--port", "8000"]
