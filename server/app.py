@@ -244,7 +244,6 @@ def reindex():
     embed_model = SentenceTransformer(EMB_MODEL_NAME, device=DEVICE)
     return {"ok": True, "items": len(meta["questions"]), "model": EMB_MODEL_NAME}
 
-
 from fastapi.staticfiles import StaticFiles
 
 # Serve React frontend
