@@ -1,126 +1,226 @@
-.projects {
-  background: #e6f7ff;
-  padding: 80px 20px;
-  color: #333;
-  width: 100%;
+/* Projects - pastel cyan horizontal cards (non-tailwind) */
+
+.projects-section {
+  background: linear-gradient(180deg, #e9fbff 0%, #f6fcff 100%);
+  padding: 80px 6%;
+  color: #03343b;
 }
 
-.projects h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.4rem;
-  color: #009688;
-}
-
-/* Stack projects vertically, centered like Experience */
-.projects-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;   /* ✅ center all project cards */
-  width: 100%;
-}
-
-.project-card {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-left: 6px solid #00bcd4;
-  padding: 30px;
-  border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  gap: 30px;
-  width: 100%;
-  max-width: 1100px;  /* ✅ keeps centered */
+.projects-inner {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #007f88;
+  margin-bottom: 36px;
+  font-weight: 700;
 }
 
-.project-logo {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-  background: #fff;
-  padding: 5px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-
-.project-info {
-  text-align: left;
-  flex: 1;
-}
-
-.project-info h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.project-info p {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #555;
-}
-
-.tags span {
-  display: inline-block;
-  background: #f0faff;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  margin-right: 6px;
-  color: #009688;
-}
-
-/* 🔹 Links Section */
-.project-links {
-  margin-top: 16px;
+/* List */
+.projects-list {
   display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center; /* center cards horizontally */
+}
+
+/* Card */
+.project-card {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(3, 60, 64, 0.06);
+  cursor: pointer;
+  transition: transform .28s ease, box-shadow .28s ease;
+  border-left: 6px solid rgba(0, 188, 212, 0.95);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 50px rgba(3, 60, 64, 0.12);
+}
+
+/* Left image */
+.project-left {
+  flex: 0 0 300px;
+  max-width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right content */
+.project-right {
+  flex: 1;
+  padding: 20px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #02363a;
+  font-weight: 700;
+}
+
+.project-date {
+  font-size: 0.9rem;
+  color: #007f88;
+  background: rgba(0,188,212,0.08);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* short paragraph */
+.project-short {
+  color: #28585b;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+/* tags + actions row */
+.project-meta {
+  margin-top: auto; /* push to bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-/* Styled buttons */
-.btn-link {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
+.project-tags { display: flex; gap: 8px; flex-wrap: wrap; align-items:center; }
+.tag {
+  background: rgba(0, 245, 255, 0.08);
+  color: #007a82;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid rgba(0,188,212,0.08);
+}
+
+/* buttons */
+.project-links { display:flex; gap:10px; align-items:center; }
+
+.btn {
   text-decoration: none;
-  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform .18s ease, box-shadow .18s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
 }
 
-.btn-link.live {
-  background: #00bcd4;
-  color: #fff;
-}
-.btn-link.live:hover {
-  background: #0097a7;
+.btn-live {
+  background: linear-gradient(90deg,#00cfe0,#00e6ff);
+  color: #022426;
+  box-shadow: 0 8px 20px rgba(0,230,255,0.12);
 }
 
-.btn-link.github {
-  background: #f0faff;
-  color: #009688;
-  border: 1px solid #00bcd4;
-}
-.btn-link.github:hover {
-  background: #00bcd4;
-  color: #fff;
+.btn-live:hover { transform: translateY(-3px); filter:brightness(.98); }
+
+.btn-code {
+  background: #e9fbff;
+  color: #006b72;
+  border: 1px solid rgba(0,188,212,0.12);
 }
 
-/* Responsive: stack image above text */
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  .project-info {
-    text-align: center;
-  }
+.btn-code:hover { transform: translateY(-3px); }
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 10, 12, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 24px;
+}
+
+.modal-card {
+  background: #021b1e;
+  color: #e6fbff;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(2,50,56,0.6);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: transparent;
+  color: #bfeff6;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.modal-body {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+}
+
+.modal-image {
+  width: 360px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 360px;
+}
+
+.modal-content {
+  flex: 1;
+  padding: 6px 10px;
+}
+
+.modal-sub { color: #7eeff6; margin-bottom: 10px; font-weight:600; }
+.modal-desc { color: #dff8fb; line-height:1.6; margin-bottom: 14px; }
+
+.modal-features {
+  list-style: disc;
+  margin-left: 18px;
+  color: #bff6f9;
+}
+
+/* responsive */
+@media (max-width: 880px) {
+  .project-card { flex-direction: column; }
+  .project-left { flex: 0 0 auto; width:100%; max-width:100%; height:220px; }
+  .project-thumb { height:100%; }
+  .project-short { max-width: 100%; }
+  .modal-body { flex-direction: column; }
+  .modal-image { width: 100%; height: 220px; flex: 0 0 auto; }
 }

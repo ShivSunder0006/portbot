@@ -1,32 +1,44 @@
 import React from "react";
 import "../styles/Contact.css";
-import useScrollFadeIn from "../utils/useScrollFadeIn";
-
-// react-icons
-import { FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
 
 function Contact() {
-  const fadeIn = useScrollFadeIn();
-
   return (
-    <section id="contact" className="contact" ref={fadeIn.ref} style={fadeIn.style}>
-      <h2>Contact Me</h2>
-      <p>I'd love to connect! Reach me via email or on my socials below.</p>
+    <section id="contact" className="contact-section">
+      <h2 className="contact-title">Get in Touch</h2>
+      <p className="contact-text">
+        I'm always open to discussing new opportunities, collaborations, or just chatting about AI & Machine Learning.
+      </p>
 
-      <div className="contact-links">
-        {/* Email */}
-        <a href="mailto:shivsunder46@gmail.com" className="contact-btn email">
-          <FaEnvelope className="icon" /> Email
+      <div className="contact-cards">
+        <a
+          href="mailto:shivsunder46@gmail.com"
+          className="contact-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaEnvelope className="contact-icon" />
+          <span>Email</span>
         </a>
 
-        {/* LinkedIn */}
-        <a href="https://www.linkedin.com/in/shiv-sunder-pradhan-1a0a81194/" target="_blank" rel="noreferrer" className="contact-btn linkedin">
-          <FaLinkedin className="icon" /> LinkedIn
+        <a
+          href="https://www.linkedin.com/in/shiv-sunder-pradhan-1a0a81194/"
+          className="contact-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin className="contact-icon" />
+          <span>LinkedIn</span>
         </a>
 
-        {/* Instagram */}
-        <a href="https://instagram.com/yourusername" target="_blank" rel="noreferrer" className="contact-btn instagram">
-          <FaInstagram className="icon" /> Instagram
+        <a
+          href="https://github.com/ShivSunder0006"
+          className="contact-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub className="contact-icon" />
+          <span>GitHub</span>
         </a>
       </div>
     </section>

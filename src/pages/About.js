@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/About.css";
 import useScrollFadeIn from "../utils/useScrollFadeIn";
+import ResumePDF from "../assets/ShivSunder.pdf"; // ✅ Add your PDF file in src/assets
 
 function About() {
   const fadeIn = useScrollFadeIn();
@@ -45,6 +46,13 @@ function About() {
             results under pressure. I am now eager to bring that same energy,
             passion, and problem-solving ability to a new role.
           </p>
+
+          {/* ✅ Download CV Button */}
+          <div className="cv-btn-wrapper">
+            <a href={ResumePDF} download className="cv-btn">
+              📄 Download CV
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -6,54 +6,35 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const links = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },  // ✅ added
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" }
-  ];
-
   return (
-    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
-      <div className="header-container">
-        {/* Logo */}
-        <a href="#" className="logo">Shiv Sunder Pradhan</a>
+    <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+      <div className="nav-container">
+        <a href="#home" className="logo">
+          <span className="logo-highlight">Shiv</span> Sunder
+        </a>
 
-        {/* Desktop Nav */}
-        <nav className="nav-links">
-          {links.map(link => (
-            <a key={link.name} href={link.href}>
-              {link.name}
-            </a>
-          ))}
+        <nav className={`nav-links ${isOpen ? "open" : ""}`}>
+          <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
+          <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+          <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
+          <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
+          <a href="#experience" onClick={() => setIsOpen(false)}>Experience</a>
+          <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? "✖" : "☰"}
-        </button>
-      </div>
-
-      {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="mobile-menu">
-          {links.map(link => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
+        <div className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+          <div className={`bar ${isOpen ? "active" : ""}`}></div>
+          <div className={`bar ${isOpen ? "active" : ""}`}></div>
+          <div className={`bar ${isOpen ? "active" : ""}`}></div>
         </div>
-      )}
+      </div>
     </header>
   );
 }

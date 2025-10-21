@@ -1,55 +1,54 @@
-.contact {
-  background: #fff;
-  padding: 80px 20px;
+.contact-section {
+  background: linear-gradient(180deg, #f0fdff 0%, #e0fbff 100%);
+  padding: 80px 6%;
   text-align: center;
-  color: #333;
-  box-shadow: inset 0 4px 10px rgba(0,0,0,0.05);
+  color: #02363a;
 }
 
-.contact h2 {
+.contact-title {
+  font-size: 2.2rem;
+  color: #007f88;
+  font-weight: 700;
   margin-bottom: 20px;
-  color: #009688;
 }
 
-.contact p {
-  color: #555;
-  margin-bottom: 30px;
+.contact-text {
+  color: #28585b;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
 }
 
-.contact-links {
+.contact-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
 }
 
-.contact-btn {
+.contact-card {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  border-radius: 30px;
+  gap: 12px;
+  background: white;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.08);
+  padding: 14px 24px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
+  color: #007f88;
+  font-weight: 600;
   transition: all 0.3s ease;
-  color: #fff;
 }
 
-.contact-btn .icon {
-  font-size: 1.2rem;
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.15);
+  background: linear-gradient(90deg, #e0ffff, #f7ffff);
 }
 
-.contact-btn.email {
-  background: #00bcd4;
-}
-.contact-btn.linkedin {
-  background: #26c6da;
-}
-.contact-btn.instagram {
-  background: #009688;
-}
-
-.contact-btn:hover {
-  filter: brightness(0.9);
+.contact-icon {
+  font-size: 1.5rem;
+  color: #00bcd4;
 }
