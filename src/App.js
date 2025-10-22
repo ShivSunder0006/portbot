@@ -24,11 +24,6 @@ function App() {
         <Projects setSelectedProject={setSelectedProject} />
         <Skills />
         <Contact />
-<<<<<<< HEAD
-        {/* <Chatbot /> */}
-=======
-        // <Chatbot />
->>>>>>> origin/main
       </main>
       <Footer />
 
