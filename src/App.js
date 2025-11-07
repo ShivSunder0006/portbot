@@ -8,7 +8,7 @@ import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";  // ✅ new section
 import Contact from "./pages/Contact";
 import ProjectModal from "./components/ProjectModal";
-import Chatbot from "./components/Chatbot";
+// import Chatbot from "./components/Chatbot";
 
 
 function App() {
