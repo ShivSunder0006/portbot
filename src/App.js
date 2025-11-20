@@ -8,10 +8,10 @@ import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";  
 import Contact from "./pages/Contact";
 import ProjectModal from "./components/ProjectModal";
-<<<<<<< HEAD
-import Chatbot from "./components/Chatbot";
 import Certifications from "./pages/Certifications";
 
+<<<<<<< HEAD
+import Chatbot from "./components/Chatbot";
 =======
 // import Chatbot from "./components/Chatbot";
 >>>>>>> d6b6e75052f8281d7444f50a685872d1a8ac4e54
