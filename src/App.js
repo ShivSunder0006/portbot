@@ -25,7 +25,7 @@ function App() {
         <Certifications />
         <Skills />
         <Contact />
-        <Chatbot />
+        // <Chatbot />
       </main>
       <Footer />
 
