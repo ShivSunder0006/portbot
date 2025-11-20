@@ -1,3 +1,8 @@
+.nav-links a.active {
+  color: #00cfe0;
+  border-bottom: 2px solid #00cfe0;
+}
+
 .navbar {
   position: fixed;
   width: 100%;

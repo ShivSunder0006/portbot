@@ -5,10 +5,12 @@ import Hero from "./pages/Hero";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
-import Experience from "./pages/Experience";  // ✅ new section
+import Experience from "./pages/Experience";  
 import Contact from "./pages/Contact";
 import ProjectModal from "./components/ProjectModal";
 import Chatbot from "./components/Chatbot";
+import Certifications from "./pages/Certifications";
+
 
 
 function App() {
@@ -22,8 +24,10 @@ function App() {
         <About />
         <Experience />
         <Projects setSelectedProject={setSelectedProject} />
+        <Certifications />
         <Skills />
         <Contact />
+        <Chatbot />
       </main>
       <Footer />
 
