@@ -13,7 +13,8 @@ function Projects() {
       title: "MultiModal RAG System",
       period: "Dec 2025",
       short: "A Retrieval-Augmented Generation system combining text and image data for enhanced responses.",
-      tags: ["LangChain", "OpenAI", "CLIP", "Pinecone", "Streamlit"],
+      tags: ["Hybrid Information Retrieval (FAISS + BM25)", "Dense Vector Embeddings (Sentence-Transformers)", "Reciprocal Rank Fusion (RRF)", "Neural Reranking (Cohere Reranker)", "Multimodal Document Parsing (Unstructured + OCR)"],
+
       features: [
         "Using OpenAI emMultimodal Retrieval-Augmented Generation (RAG) system for chat-based question answering over PDFs and text using title-aware chunking and hybrid dense–sparse retrieval.",
         "Supports multi-query expansion, Reciprocal Rank Fusion (RRF), and reranking to deliver accurate, context-grounded responses with session-isolated document indexing.",
