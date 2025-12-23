@@ -10,6 +10,26 @@ function Projects() {
 
   const projects = [
     {
+      title: "MultiModal RAG System",
+      date: "2025",
+      shortDescription:
+        "A multi-modal Retrieval-Augmented Generation system enabling question answering over text and images using cross-modal embeddings.",
+      description:
+        "Developed a Multi-Modal Retrieval-Augmented Generation (RAG) system that supports both text and image-based queries. The system uses CLIP embeddings for cross-modal similarity search and FAISS for efficient retrieval, enabling accurate context grounding before generation. Deployed as an interactive Hugging Face Space for real-time inference.",
+      tags: [
+        "Transformers",
+        "LangChain",
+        "FAISS",
+        "CLIP",
+        "Hugging Face"
+      ],
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+      liveLink: "https://huggingface.co/spaces/shivsunder0006/MultiModalRAG",
+      githubLink: "https://huggingface.co/spaces/shivsunder0006/MultiModalRAG/tree/main"
+
+    },
+
+    {
       title: "Footfall Counter",
       period: "Oct 2025",
       short: "Real-time crowd counting app using YOLOv8 and OpenCV, deployed on Hugging Face.",
