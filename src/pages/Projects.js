@@ -11,24 +11,19 @@ function Projects() {
   const projects = [
     {
       title: "MultiModal RAG System",
-      date: "2025",
-      shortDescription:
-        "A multi-modal Retrieval-Augmented Generation system enabling question answering over text and images using cross-modal embeddings.",
-      description:
-        "Developed a Multi-Modal Retrieval-Augmented Generation (RAG) system that supports both text and image-based queries. The system uses CLIP embeddings for cross-modal similarity search and FAISS for efficient retrieval, enabling accurate context grounding before generation. Deployed as an interactive Hugging Face Space for real-time inference.",
-      tags: [
-        "Transformers",
-        "LangChain",
-        "FAISS",
-        "CLIP",
-        "Hugging Face"
+      period: "Dec 2025",
+      short: "A Retrieval-Augmented Generation system combining text and image data for enhanced responses.",
+      tags: ["LangChain", "OpenAI", "CLIP", "Pinecone", "Streamlit"],
+      features: [
+        "Using OpenAI emMultimodal Retrieval-Augmented Generation (RAG) system for chat-based question answering over PDFs and text using title-aware chunking and hybrid dense–sparse retrieval.",
+        "Supports multi-query expansion, Reciprocal Rank Fusion (RRF), and reranking to deliver accurate, context-grounded responses with session-isolated document indexing.",
+        "Built using Python, unstructured (PDF/OCR parsing), FAISS (dense embeddings with Sentence-Transformers), BM25, Cohere Reranker, and Gemini / Hugging Face LLM APIs, with a Gradio-based chat interface."
       ],
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
-      liveLink: "https://huggingface.co/spaces/shivsunder0006/MultiModalRAG",
-      githubLink: "https://huggingface.co/spaces/shivsunder0006/MultiModalRAG/tree/main"
-
+      liveUrl: "https://huggingface.co/spaces/shivsunder0006/MultiModal_RAG_System",
+      repoUrl: "https://huggingface.co/spaces/shivsunder0006/MultiModalRAG/tree/main",
+      imageUrl: Placeholder
     },
-
+    
     {
       title: "Footfall Counter",
       period: "Oct 2025",
